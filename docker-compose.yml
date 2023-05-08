@@ -1,0 +1,12 @@
+#Nginx Service
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8765:5678
+    image: dockerdemo:dockerdemo
+    container_name: dockernginx
+    working_dir: /var/www
